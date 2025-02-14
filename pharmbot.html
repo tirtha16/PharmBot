@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma Chatbot - PharmBot</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://img.freepik.com/premium-photo/futuristic-capsules-with-network-connections-concept-digital-art-style-depicting-modern-medicine-scifi-visualization-pharmaceutical-technology-innovation-ai_372197-48188.jpg') no-repeat center center fixed; /* Add your image URL here */
+      background-size: cover;
+      color: #2b42d6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); 
+      border-radius: 10px;
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: #2b42d6;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #832b2b;
+    }
+
+    .chatbot-container {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #86baff;
+      --df-messenger-user-message: #77fad2;
+      --df-messenger-font-size: 14px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: blue;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+    <header class="header">
+      <h1>Welcome to PharmBot!</h1>
+      <p>Your virtual pharmacist assistant. Ask any questions about medications.</p>
+    </header>
+
+    <main>
+      <div class="chatbot-container">
+        <!-- Dialogflow Messenger Integration -->
+        <df-messenger
+          chat-icon="https:&#x2F;&#x2F;img.freepik.com&#x2F;premium-photo&#x2F;pills-arranged-circular-pattern-pharmaceutical-industry-concept_964851-139257.jpg?w=1060"
+          intent="WELCOME"
+          chat-title="PharmBot"
+          agent-id="d114ec52-e7ae-4acf-9563-3598a70bb87d"
+          language-code="en">
+        </df-messenger>
+      </div>
+    </main>
+
+    <footer>
+      <p>PharmBot &copy; 2024 | All Rights Reserved</p>
+    </footer>
+  </section>
+
+  <!-- Feedback Section -->
+  <script>
+    document.addEventListener('click', function(event) {
+      if (event.target && event.target.textContent.includes("👍")) {
+        alert("Thank you for your feedback!");
+      } else if (event.target && event.target.textContent.includes("👎")) {
+        alert("We appreciate your feedback, we'll work to improve.");
+      }
+    });
+  </script>
+
+</body>
+</html>
