@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://img.freepik.com/premium-photo/futuristic-capsules-with-network-connections-concept-digital-art-style-depicting-modern-medicine-scifi-visualization-pharmaceutical-technology-innovation-ai_372197-48188.jpg') no-repeat center center fixed; /* Add your image URL here */
+    background-size: cover;
+    color: #2b42d6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #2b42d6;
+  }
+  .header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #832b2b;
+  }
+  
+  .chatbot-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  df-messenger {
+    --df-messenger-bot-message: #86baff;
+    --df-messenger-user-message: #77fad2;
+    --df-messenger-font-size: 14px;
+  }
+  
+  footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: blue;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  
